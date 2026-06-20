@@ -449,10 +449,6 @@ p + p { margin-top: 16px; }
     height: 100%;
     border: 0;
 }
-.footer-col .footer-map-link {
-    color: var(--gold);
-    font-weight: 500;
-}
 .footer-bottom { border-top: 1px solid var(--border); padding: 22px 0; }
 .footer-bottom p { color: var(--grey); font-size: 0.85rem; text-align: center; }
 
