@@ -96,16 +96,29 @@
     var sections = document.querySelectorAll('section[id]');
     var navLinks = document.querySelectorAll('.nav-link');
     if (sections.length && navLinks.length) {
-        window.addEventListener('scroll', function () {
-            var pos = window.pageYOffset + 120;
+        function updateActiveNav() {
+            var headerOffset = header ? header.offsetHeight + 24 : 120;
+            var pos = window.pageYOffset + headerOffset;
             var currentId = '';
+            var docBottom = window.pageYOffset + window.innerHeight >= document.documentElement.scrollHeight - 8;
+
             sections.forEach(function (sec) {
-                if (pos >= sec.offsetTop) currentId = sec.getAttribute('id');
+                var top = sec.offsetTop - headerOffset;
+                var bottom = top + sec.offsetHeight;
+                if (pos >= top && pos < bottom) currentId = sec.getAttribute('id');
             });
+
+            if (!currentId && docBottom) {
+                currentId = sections[sections.length - 1].getAttribute('id');
+            }
+
             navLinks.forEach(function (link) {
                 var href = link.getAttribute('href') || '';
                 link.classList.toggle('active', href === '#' + currentId);
             });
-        }, { passive: true });
+        }
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
+        window.addEventListener('resize', updateActiveNav);
+        updateActiveNav();
     }
 })();
