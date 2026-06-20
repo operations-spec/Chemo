@@ -5,9 +5,10 @@
     /* Sticky header state */
     var header = document.getElementById('siteHeader');
     var backToTop = document.getElementById('backToTop');
+    var headerPinned = header && header.getAttribute('data-header-mode') === 'solid';
     function onScroll() {
         var y = window.pageYOffset;
-        if (header) header.classList.toggle('scrolled', y > 30);
+        if (header) header.classList.toggle('scrolled', headerPinned || y > 30);
         if (backToTop) backToTop.classList.toggle('show', y > 500);
     }
     window.addEventListener('scroll', onScroll, { passive: true });
