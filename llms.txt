@@ -1,0 +1,10 @@
+Chemo Graphic International is a static marketing site for offset printing consumables, press room chemistry, blankets, inspection systems, and related print-industry solutions.
+
+Primary pages:
+- https://chemo-graphic-intn.netlify.app/
+- https://chemo-graphic-intn.netlify.app/products
+- https://chemo-graphic-intn.netlify.app/image-brand
+
+Contact:
+- Email: info@chemo.in
+- Phone: +91 99300 70755

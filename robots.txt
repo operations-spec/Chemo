@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chemo-graphic-intn.netlify.app/sitemap.xml
