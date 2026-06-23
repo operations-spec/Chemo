@@ -418,6 +418,29 @@ p + p { margin-top: 16px; }
     margin-bottom: 10px;
 }
 .brand-info-card p { color: var(--grey); }
+.brand-coming-soon {
+    min-height: calc(100vh - 88px);
+    display: flex;
+    align-items: center;
+}
+.brand-coming-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 44px;
+    align-items: center;
+}
+.brand-coming-art {
+    min-height: 320px;
+}
+.brand-coming-copy {
+    max-width: 520px;
+}
+.brand-coming-text {
+    font-family: var(--font-head);
+    color: var(--gold);
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    line-height: 1.1;
+}
 
 /* ---------- Contact ---------- */
 .contact-grid { align-items: start; }
@@ -587,6 +610,7 @@ p + p { margin-top: 16px; }
     .partner-grid { grid-template-columns: repeat(3, 1fr); }
     .partner-grid-single { grid-template-columns: repeat(1, minmax(220px, 320px)); }
     .brand-spotlight { grid-template-columns: 1fr; }
+    .brand-coming-card { grid-template-columns: 1fr; }
     .brand-info-grid { grid-template-columns: 1fr; }
     .cat-items { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
