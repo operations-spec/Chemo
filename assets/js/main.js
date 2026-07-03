@@ -97,18 +97,6 @@
     window.addEventListener('scroll', runCounters, { passive: true });
     runCounters();
 
-    /* Contact form (front-end only) */
-    var form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            if (!form.checkValidity()) { form.reportValidity(); return; }
-            var note = document.getElementById('formNote');
-            if (note) note.hidden = false;
-            form.reset();
-        });
-    }
-
     /* Current year */
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
