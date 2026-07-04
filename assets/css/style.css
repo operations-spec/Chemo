@@ -281,7 +281,7 @@ html[data-theme="dark"] .hero-overlay {
     font-family: var(--font-head);
     font-weight: 700;
     color: var(--white);
-    font-size: clamp(2.8rem, 7vw, 5.4rem);
+    font-size: clamp(2.4rem, 6vw, 4.8rem);
     line-height: 1.02;
     letter-spacing: 0.01em;
     margin-bottom: 24px;
@@ -293,7 +293,7 @@ html[data-theme="dark"] .hero-overlay {
     align-items: start;
     margin-bottom: 30px;
 }
-.hero-lead { font-size: 1.1rem; color: var(--grey-light); max-width: 600px; margin-bottom: 0; }
+.hero-lead { font-size: 1rem; color: var(--grey-light); max-width: 600px; margin-bottom: 0; }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 .hero-copy-row .hero-actions {
     align-self: center;
@@ -303,7 +303,7 @@ html[data-theme="dark"] .hero-overlay {
     max-width: 300px;
 }
 .hero-copy-row .hero-actions .btn {
-    min-width: 220px;
+    min-width: 200px;
 }
 .hero-scroll {
     position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
@@ -343,15 +343,15 @@ html[data-theme="dark"] .hero-overlay {
     left: 0;
     z-index: 7;
     display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 18px;
     align-items: start;
     padding: 14px 16px;
     background: linear-gradient(165deg, rgba(255, 255, 255, 0.92), rgba(241, 243, 246, 0.92));
     border: 1px solid rgba(210, 174, 109, 0.32);
     border-radius: 12px;
     box-shadow: 0 22px 48px -30px rgba(17, 18, 20, 0.38);
-    width: min(420px, calc(100vw - 48px));
+    width: min(480px, calc(100vw - 48px));
     opacity: 0;
     visibility: hidden;
     transform: translateY(6px) scale(0.98);
@@ -364,8 +364,8 @@ html[data-theme="dark"] .hero-overlay {
     transform: translateY(0) scale(1);
 }
 .testimonial-focus-media {
-    width: 72px;
-    height: 72px;
+    width: 84px;
+    height: 84px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -390,20 +390,20 @@ html[data-theme="dark"] .hero-overlay {
 .testimonial-focus-company {
     color: var(--white);
     font-weight: 600;
-    font-size: 0.96rem;
+    font-size: 1.04rem;
     line-height: 1.2;
     margin-bottom: 6px;
 }
 .testimonial-focus-quote {
     color: var(--grey-light);
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     line-height: 1.5;
 }
 .testimonial-focus-person,
 .testimonial-focus-designation,
 .testimonial-focus-website {
     color: var(--grey);
-    font-size: 0.76rem;
+    font-size: 0.82rem;
     line-height: 1.35;
     margin-top: 6px;
 }
@@ -426,16 +426,16 @@ html[data-theme="dark"] .hero-overlay {
     animation-play-state: paused;
 }
 .testimonial-card {
-    width: 216px;
-    min-height: 92px;
+    width: 324px;
+    min-height: 138px;
     display: grid;
-    grid-template-columns: 50px 1fr;
-    gap: 12px;
+    grid-template-columns: 74px 1fr;
+    gap: 18px;
     align-items: center;
     background: linear-gradient(165deg, var(--surface), var(--surface-2));
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 12px 14px;
+    border-radius: 16px;
+    padding: 18px 20px;
     cursor: pointer;
     transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
@@ -451,25 +451,25 @@ html[data-theme="dark"] .hero-overlay {
     outline-offset: 2px;
 }
 .testimonial-logo {
-    width: 50px;
-    height: 50px;
+    width: 74px;
+    height: 74px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ffffff;
     border: 1px solid rgba(10, 10, 11, 0.08);
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
     color: var(--gold-deep);
     font-family: var(--font-head);
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 .testimonial-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    padding: 7px;
+    padding: 10px;
 }
 .testimonial-preview {
     min-width: 0;
@@ -478,14 +478,14 @@ html[data-theme="dark"] .hero-overlay {
     display: block;
     color: var(--white);
     font-weight: 600;
-    font-size: 0.88rem;
+    font-size: 1rem;
     line-height: 1.2;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 .testimonial-snippet {
     color: var(--grey);
-    font-size: 0.78rem;
-    line-height: 1.35;
+    font-size: 0.92rem;
+    line-height: 1.5;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -938,7 +938,7 @@ html[data-theme="dark"] .page-hero {
 .cat-block { margin-bottom: 56px; }
 .cat-block[id] { scroll-margin-top: 120px; }
 .cat-block:last-child { margin-bottom: 0; }
-.cat-head { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 26px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.cat-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
 .cat-title { display: flex; align-items: center; gap: 16px; min-width: 0; }
 .cat-title i {
     color: var(--gold); font-size: 1.3rem;
@@ -947,25 +947,172 @@ html[data-theme="dark"] .page-hero {
     background: var(--gold-soft); border: 1px solid rgba(210,174,109,0.28); border-radius: 12px;
 }
 .cat-head h2 { font-family: var(--font-head); color: var(--white); font-size: 1.9rem; }
-.cat-brand-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; }
+@media (min-width: 981px) {
+    .cat-head h2 { white-space: nowrap; }
+}
+.cat-brand-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    width: auto;
+    max-width: 460px;
+}
+#press-room-chemistry .cat-brand-links,
+#printing-blankets .cat-brand-links,
+#security-papers-substrates .cat-brand-links {
+    display: grid;
+    align-items: center;
+    justify-content: end;
+    justify-items: center;
+}
+#press-room-chemistry .cat-brand-links {
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 12px;
+    row-gap: 10px;
+}
+#press-room-chemistry .cat-brand-link:nth-child(4) {
+    grid-row: 2;
+    grid-column: 3;
+}
+#printing-blankets .cat-brand-links {
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 12px;
+    row-gap: 10px;
+}
+#printing-blankets .cat-brand-link:nth-child(4) {
+    grid-row: 2;
+    grid-column: 2;
+}
+#printing-blankets .cat-brand-link:nth-child(5) {
+    grid-row: 2;
+    grid-column: 3;
+}
+#security-papers-substrates .cat-brand-links {
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+#security-papers-substrates .cat-brand-links {
+    justify-items: center;
+}
 .cat-brand-link {
-    width: 58px; height: 42px;
+    width: auto; height: auto;
     display: flex; align-items: center; justify-content: center;
-    background: #ffffff;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 7px;
-    transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
 }
 .cat-brand-link:hover {
-    border-color: rgba(210,174,109,0.55);
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px -18px rgba(17, 18, 20, 0.35);
+    opacity: 0.92;
 }
 .cat-brand-link img {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 32px;
+    max-width: 115px;
     object-fit: contain;
+    display: block;
+}
+.cat-brand-link-marks img {
+    height: 26px;
+    max-width: 92px;
+}
+.cat-brand-link-policrom img {
+    height: 40px;
+    max-width: 132px;
+}
+.cat-brand-link-pavan img {
+    height: 36px;
+    max-width: 100px;
+}
+#security-papers-substrates .cat-brand-link-policrom img,
+#security-papers-substrates .cat-brand-link-pavan img {
+    height: 56px;
+    max-width: 168px;
+}
+#security-papers-substrates .cat-brand-link-marks img,
+#security-papers-substrates .cat-brand-link-policrom img,
+#security-papers-substrates .cat-brand-link-pavan img {
+    transform-origin: center;
+}
+#security-papers-substrates .cat-brand-link-marks img,
+#security-papers-substrates .cat-brand-link-policrom img,
+#security-papers-substrates .cat-brand-link-pavan img {
+    transform: scale(1.5);
+}
+#security-papers-substrates .cat-brand-link:nth-child(4) {
+    grid-row: 2;
+    grid-column: 2;
+}
+#security-papers-substrates .cat-brand-link:nth-child(5) {
+    grid-row: 2;
+    grid-column: 3;
+}
+#press-room-chemistry .cat-brand-link img,
+#press-room-chemistry img[alt="MTech logo"] {
+    height: 48px;
+    max-width: 154px;
+}
+#printing-blankets .cat-brand-link img,
+#printing-blankets img[alt="MTech logo"] {
+    height: 48px;
+    max-width: 154px;
+}
+#printing-blankets img[alt="MTech logo"] {
+    height: 48px;
+    max-width: 154px;
+}
+#press-room-chemistry img[alt="B4P logo"] {
+    height: 34px;
+    max-width: 101px;
+}
+#printing-blankets img[alt="Image logo"] {
+    height: 80px;
+    max-width: 166px;
+}
+#printing-blankets img[alt="Sava logo"]  {
+    height: 65px;
+    max-width: 200px;
+}
+#security-papers-substrates img[alt="MPack logo"] {
+    height:50px;
+    max-width: 150px;
+    transform: translateX(-8px);
+}
+
+#security-banknote-inks .cat-brand-link img,
+#vision-inspection-systems .cat-brand-link img,
+#die-making-die-cutting-consumables .cat-brand-link img {
+    height: 56px;
+    max-width: 180px;
+}
+
+#printing-blankets .cat-brand-link img { max-width: 154px; }
+#die-making-die-cutting-consumables .cat-brand-link img {
+    max-width: 190px;
+}
+
+#security-banknote-inks .cat-brand-link img,
+#vision-inspection-systems .cat-brand-link img {
+    max-width: 160px;
+}
+#security-banknote-inks img[alt="B4P logo"],
+#vision-inspection-systems img[alt="B4P logo"] {
+    height: 42px;
+    max-width: 126px;
+}
+#die-making-die-cutting-consumables img[alt="Thompson-Boyd logo"],
+#die-making-die-cutting-consumables img[alt="Sigma logo"] {
+    height: 72px;
+    max-width: 168px;
+}
+#die-making-die-cutting-consumables .cat-brand-link img[alt="Sigma logo"] {
+    border: 0;
+    background: transparent;
 }
 .cat-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .cat-item {
@@ -1021,6 +1168,9 @@ html[data-theme="dark"] .page-hero {
     .cat-brand-links { justify-content: flex-start; }
     .cat-items { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
+    .testimonial-card { width: 280px; min-height: 124px; grid-template-columns: 64px 1fr; gap: 14px; padding: 16px 18px; }
+    .testimonial-logo { width: 64px; height: 64px; }
+    .testimonial-logo img { padding: 8px; }
 }
 @media (max-width: 680px) {
     .brand-name { font-size: 1rem; letter-spacing: 0.04em; }
@@ -1048,9 +1198,60 @@ html[data-theme="dark"] .page-hero {
     .hero { min-height: 100svh; }
     .hero-content { max-width: 100%; padding-top: 120px; padding-bottom: 92px; transform: none; }
     .customer-strip { margin-top: 28px; padding-top: 12px; }
-    .testimonial-focus-panel { grid-template-columns: 56px minmax(0, 1fr); gap: 12px; padding: 12px; width: min(300px, calc(100vw - 32px)); }
-    .testimonial-focus-media { width: 56px; height: 56px; }
+    .testimonial-focus-panel { grid-template-columns: 52px minmax(0, 1fr); gap: 10px; padding: 12px; width: min(320px, calc(100vw - 32px)); }
+    .testimonial-focus-media { width: 52px; height: 52px; }
     .testimonial-track { animation-duration: 48s; }
-    .testimonial-card { width: min(190px, 62vw); min-height: 84px; grid-template-columns: 44px 1fr; gap: 10px; padding: 10px 12px; }
-    .testimonial-logo { width: 52px; height: 52px; }
+    .testimonial-card { width: min(260px, 82vw); min-height: 112px; grid-template-columns: 56px 1fr; gap: 12px; padding: 14px 16px; }
+    .testimonial-logo { width: 56px; height: 56px; }
+    .testimonial-logo img { padding: 7px; }
+    .testimonial-company { font-size: 0.96rem; }
+    .testimonial-snippet { font-size: 0.86rem; }
+    .cat-brand-links { gap: 6px 8px; max-width: none; }
+    #press-room-chemistry .cat-brand-links,
+    #security-papers-substrates .cat-brand-links {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .cat-brand-link img { height: 34px; max-width: 112px; }
+    .cat-brand-link-marks img { height: 28px; max-width: 92px; }
+    .cat-brand-link-policrom img { height: 40px; max-width: 132px; }
+    .cat-brand-link-pavan img { height: 38px; max-width: 100px; }
+    #press-room-chemistry .cat-brand-link img,
+    #press-room-chemistry img[alt="MTech logo"] {
+        height: 37px;
+        max-width: 123px;
+    }
+    #printing-blankets .cat-brand-link img,
+    #printing-blankets img[alt="MTech logo"] {
+        height: 37px;
+        max-width: 123px;
+    }
+    #printing-blankets img[alt="MTech logo"] {
+        height: 37px;
+        max-width: 123px;
+    }
+    #press-room-chemistry img[alt="B4P logo"] { height: 34px; max-width: 101px; }
+    #printing-blankets img[alt="Image logo"] { height: 40px; max-width: 132px; }
+    #printing-blankets img[alt="Sava logo"] { height: 40px; max-width: 132px; }
+    #security-papers-substrates img[alt="MPack logo"] { height: 23px; max-width: 76px; transform: translateX(-6px); }
+    #security-banknote-inks .cat-brand-link img,
+    #vision-inspection-systems .cat-brand-link img,
+    #die-making-die-cutting-consumables .cat-brand-link img {
+        height: 46px;
+        max-width: 150px;
+    }
+    #security-banknote-inks img[alt="B4P logo"],
+    #vision-inspection-systems img[alt="B4P logo"] {
+        height: 42px;
+        max-width: 126px;
+    }
+    #die-making-die-cutting-consumables .cat-brand-link img { max-width: 160px; }
+    #security-banknote-inks .cat-brand-link img,
+    #vision-inspection-systems .cat-brand-link img { max-width: 132px; }
+    #die-making-die-cutting-consumables img[alt="Thompson-Boyd logo"],
+    #die-making-die-cutting-consumables img[alt="Sigma logo"] {
+        height: 60px;
+        max-width: 144px;
+    }
 }
