@@ -952,59 +952,22 @@ html[data-theme="dark"] .page-hero {
     .cat-head h2 { white-space: nowrap; }
 }
 .cat-brand-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 8px 10px;
-    width: auto;
-    max-width: 460px;
-}
-#press-room-chemistry .cat-brand-links,
-#printing-blankets .cat-brand-links,
-#security-papers-substrates .cat-brand-links {
     display: grid;
-    align-items: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
     justify-content: end;
-    justify-items: center;
-}
-#press-room-chemistry .cat-brand-links {
-    grid-template-columns: repeat(3, max-content);
-    column-gap: 12px;
-    row-gap: 10px;
-}
-#press-room-chemistry .cat-brand-link:nth-child(4) {
-    grid-row: 2;
-    grid-column: 3;
-}
-#printing-blankets .cat-brand-links {
-    grid-template-columns: repeat(3, max-content);
-    column-gap: 12px;
-    row-gap: 10px;
-}
-#printing-blankets .cat-brand-link:nth-child(4) {
-    grid-row: 2;
-    grid-column: 2;
-}
-#printing-blankets .cat-brand-link:nth-child(5) {
-    grid-row: 2;
-    grid-column: 3;
-}
-#security-papers-substrates .cat-brand-links {
-    grid-template-columns: repeat(3, max-content);
-    column-gap: 10px;
-    row-gap: 10px;
-}
-#security-papers-substrates .cat-brand-links {
-    justify-items: center;
+    justify-items: stretch;
+    width: min(100%, 540px);
 }
 .cat-brand-link {
-    width: auto; height: auto;
+    width: 100%;
+    min-height: 66px;
     display: flex; align-items: center; justify-content: center;
     background: transparent;
     border: 0;
     border-radius: 0;
     padding: 0;
+    box-shadow: none;
     transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
 }
 .cat-brand-link:hover {
@@ -1013,107 +976,73 @@ html[data-theme="dark"] .page-hero {
 }
 .cat-brand-link img {
     width: auto;
-    height: 32px;
-    max-width: 115px;
+    height: auto;
+    max-width: 100%;
+    max-height: 46px;
     object-fit: contain;
     display: block;
 }
-.cat-brand-link-marks img {
-    height: 26px;
-    max-width: 92px;
+html[data-theme="dark"] .cat-brand-link {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
 }
-.cat-brand-link-policrom img {
-    height: 40px;
-    max-width: 132px;
-}
-.cat-brand-link-pavan img {
-    height: 36px;
-    max-width: 100px;
-}
+.cat-brand-link-marks img { max-height: 38px; }
+.cat-brand-link-policrom img { max-height: 149px; }
+.cat-brand-link-pavan img { max-height: 95px; }
 #security-papers-substrates .cat-brand-link-policrom img,
 #security-papers-substrates .cat-brand-link-pavan img {
-    height: 56px;
-    max-width: 168px;
+    max-height: 108px;
 }
-#security-papers-substrates .cat-brand-link-marks img,
-#security-papers-substrates .cat-brand-link-policrom img,
-#security-papers-substrates .cat-brand-link-pavan img {
+#security-papers-substrates img[alt="Policrom logo"] {
+    max-height: 72px !important;
+    transform: translateX(30px) scale(1.06);
     transform-origin: center;
 }
-#security-papers-substrates .cat-brand-link-marks img,
-#security-papers-substrates .cat-brand-link-policrom img,
-#security-papers-substrates .cat-brand-link-pavan img {
-    transform: scale(1.5);
-}
-#security-papers-substrates .cat-brand-link:nth-child(4) {
-    grid-row: 2;
-    grid-column: 2;
-}
-#security-papers-substrates .cat-brand-link:nth-child(5) {
-    grid-row: 2;
-    grid-column: 3;
-}
-#press-room-chemistry .cat-brand-link img,
-#press-room-chemistry img[alt="MTech logo"] {
-    height: 48px;
-    max-width: 154px;
-}
-#printing-blankets .cat-brand-link img,
-#printing-blankets img[alt="MTech logo"] {
-    height: 48px;
-    max-width: 154px;
-}
-#printing-blankets img[alt="MTech logo"] {
-    height: 48px;
-    max-width: 154px;
-}
-#press-room-chemistry img[alt="B4P logo"] {
-    height: 34px;
-    max-width: 101px;
+#security-papers-substrates img[alt="Ohden logo"] {
+    transform: translateX(36px);
+    transform-origin: center;
 }
 #printing-blankets img[alt="Image logo"] {
-    height: 80px;
-    max-width: 166px;
+    max-height: 99px;
 }
 #printing-blankets img[alt="Sava logo"]  {
-    height: 65px;
-    max-width: 200px;
+    max-height: 88px;
+}
+#printing-blankets img[alt="Continental logo"] {
+    max-height: 70px;
+}
+#printing-blankets img[alt="Strip Plate logo"] {
+    max-height: 105px;
 }
 #security-papers-substrates img[alt="MPack logo"] {
-    height:50px;
-    max-width: 150px;
-    transform: translateX(-8px);
+    max-height: 40px;
+    transform: translateX(30px);
+    transform-origin: center;
 }
-
-#security-banknote-inks .cat-brand-link img,
-#vision-inspection-systems .cat-brand-link img,
-#die-making-die-cutting-consumables .cat-brand-link img {
-    height: 56px;
-    max-width: 180px;
+#security-papers-substrates img[alt="Marks.3zet logo"] {
+    transform: translateX(30px);
+    transform-origin: center;
 }
-
-#printing-blankets .cat-brand-link img { max-width: 154px; }
-#die-making-die-cutting-consumables .cat-brand-link img {
-    max-width: 190px;
-}
-
-#security-banknote-inks .cat-brand-link img,
-#vision-inspection-systems .cat-brand-link img {
-    max-width: 160px;
-}
+#press-room-chemistry img[alt="B4P logo"],
 #security-banknote-inks img[alt="B4P logo"],
 #vision-inspection-systems img[alt="B4P logo"] {
-    height: 42px;
-    max-width: 126px;
+    max-height: 58px;
+    transform: translateX(18px);
+    transform-origin: center;
 }
-#die-making-die-cutting-consumables img[alt="Thompson-Boyd logo"],
+#vision-inspection-systems img[alt="B4P logo"] {
+    transform: translateX(30px);
+}
 #die-making-die-cutting-consumables img[alt="Sigma logo"] {
-    height: 72px;
-    max-width: 168px;
+    max-height: 86px;
+    transform: translateX(36px);
+    transform-origin: center;
 }
-#die-making-die-cutting-consumables .cat-brand-link img[alt="Sigma logo"] {
-    border: 0;
-    background: transparent;
+#die-making-die-cutting-consumables img[alt="Thompson-Boyd logo"] {
+    max-height: 108px;
+    transform: translateX(36px);
+    transform-origin: center;
 }
 .cat-items { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .cat-item {
@@ -1166,7 +1095,12 @@ html[data-theme="dark"] .page-hero {
     .brand-coming-card { grid-template-columns: 1fr; }
     .brand-info-grid { grid-template-columns: 1fr; }
     .cat-head { align-items: flex-start; flex-direction: column; }
-    .cat-brand-links { justify-content: flex-start; }
+    .cat-brand-links {
+        justify-content: flex-start;
+        width: 100%;
+        max-width: none;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
     .cat-items { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .testimonial-card { width: 280px; min-height: 124px; grid-template-columns: 64px 1fr; gap: 14px; padding: 16px 18px; }
@@ -1207,52 +1141,59 @@ html[data-theme="dark"] .page-hero {
     .testimonial-logo img { padding: 7px; }
     .testimonial-company { font-size: 0.96rem; }
     .testimonial-snippet { font-size: 0.86rem; }
-    .cat-brand-links { gap: 6px 8px; max-width: none; }
-    #press-room-chemistry .cat-brand-links,
-    #security-papers-substrates .cat-brand-links {
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
+    .cat-brand-links {
+        gap: 8px;
+        max-width: none;
+        width: 100%;
+        justify-content: start;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .cat-brand-link img { height: 34px; max-width: 112px; }
-    .cat-brand-link-marks img { height: 28px; max-width: 92px; }
-    .cat-brand-link-policrom img { height: 40px; max-width: 132px; }
-    .cat-brand-link-pavan img { height: 38px; max-width: 100px; }
-    #press-room-chemistry .cat-brand-link img,
-    #press-room-chemistry img[alt="MTech logo"] {
-        height: 37px;
-        max-width: 123px;
+    .cat-brand-link {
+        min-height: 58px;
+        padding: 8px 10px;
     }
-    #printing-blankets .cat-brand-link img,
-    #printing-blankets img[alt="MTech logo"] {
-        height: 37px;
-        max-width: 123px;
+    .cat-brand-link img {
+        max-height: 40px;
     }
-    #printing-blankets img[alt="MTech logo"] {
-        height: 37px;
-        max-width: 123px;
+    .cat-brand-link-marks img { max-height: 34px; }
+    .cat-brand-link-policrom img { max-height: 300px; }
+    .cat-brand-link-pavan img { max-height: 81px; }
+    #printing-blankets img[alt="Image logo"] { max-height: 90px; }
+    #printing-blankets img[alt="Sava logo"] { max-height: 72px; }
+    #printing-blankets img[alt="Continental logo"] { max-height: 58px; }
+    #printing-blankets img[alt="Strip Plate logo"] { max-height: 88px; }
+    #security-papers-substrates img[alt="MPack logo"] { max-height: 32px; }
+    #security-papers-substrates img[alt="Policrom logo"] {
+        max-height: 56px !important;
+        transform: translateX(10px) scale(0.86);
+        transform-origin: center;
     }
-    #press-room-chemistry img[alt="B4P logo"] { height: 34px; max-width: 101px; }
-    #printing-blankets img[alt="Image logo"] { height: 40px; max-width: 132px; }
-    #printing-blankets img[alt="Sava logo"] { height: 40px; max-width: 132px; }
-    #security-papers-substrates img[alt="MPack logo"] { height: 23px; max-width: 76px; transform: translateX(-6px); }
-    #security-banknote-inks .cat-brand-link img,
-    #vision-inspection-systems .cat-brand-link img,
-    #die-making-die-cutting-consumables .cat-brand-link img {
-        height: 46px;
-        max-width: 150px;
+    #security-papers-substrates img[alt="Ohden logo"] {
+        transform: translateX(20px);
+        transform-origin: center;
     }
+    #security-papers-substrates img[alt="MPack logo"],
+    #security-papers-substrates img[alt="Marks.3zet logo"] {
+        transform: translateX(10px);
+    }
+    #press-room-chemistry img[alt="B4P logo"],
     #security-banknote-inks img[alt="B4P logo"],
     #vision-inspection-systems img[alt="B4P logo"] {
-        height: 42px;
-        max-width: 126px;
+        max-height: 45px;
+        transform: translateX(12px);
+        transform-origin: center;
     }
-    #die-making-die-cutting-consumables .cat-brand-link img { max-width: 160px; }
-    #security-banknote-inks .cat-brand-link img,
-    #vision-inspection-systems .cat-brand-link img { max-width: 132px; }
-    #die-making-die-cutting-consumables img[alt="Thompson-Boyd logo"],
+    #vision-inspection-systems img[alt="B4P logo"] {
+        transform: translateX(20px);
+    }
     #die-making-die-cutting-consumables img[alt="Sigma logo"] {
-        height: 60px;
-        max-width: 144px;
+        max-height: 72px;
+        transform: translateX(20px);
+        transform-origin: center;
+    }
+    #die-making-die-cutting-consumables img[alt="Thompson-Boyd logo"] {
+        max-height: 90px;
+        transform: translateX(20px);
+        transform-origin: center;
     }
 }
