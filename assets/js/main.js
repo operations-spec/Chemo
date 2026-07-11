@@ -263,6 +263,7 @@
         var logo = document.createElement('div');
         logo.className = 'testimonial-logo';
         if (item.logo) {
+            card.style.setProperty('--testimonial-logo-url', 'url("' + item.logo + '")');
             var img = document.createElement('img');
             img.src = item.logo;
             img.alt = (item.company || 'Company') + ' logo';
